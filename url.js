@@ -1,9 +1,9 @@
 let documentURL = window.location.href;
 let replayLinkFound = false;
 let battleURL = (() => {
-  if (documentURL.searchParams.get("replay")) {
+  if (new URLSearchParams(documentURL.searchParams).get("replay")) {
     replayLinkFound = true;
-    return documentURL.searchParams.get("replay");
+    return new URLSearchParams(documentURL.searchParams).get("replay");
   }
   return "";
 })();
