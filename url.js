@@ -1,5 +1,5 @@
 setTimeout(() => {
-  let documentURL = window.location.href;
+  let documentURL = new URL(window.location.href);
   let replayLinkFound = false;
   let battleURL = "";
   let params = documentURL.search;
